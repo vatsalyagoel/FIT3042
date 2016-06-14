@@ -3,19 +3,19 @@
 int main(int argc, char const *argv[])
 {
 	int i;
-	for (i = 0; i <= 100; ++i) 
+	for (i = 0; i < 100; ++i) 
 	{
-		if((i % 3 == 0) && (i % 5 != 0)) 
+		if((i % 3 == 0) && (i % 5 == 0)) 
+		{
+			printf("%s\n", "FizzBuz");
+		}
+		else if (i % 3 == 0)
 		{
 			printf("%s\n", "Fizz");
 		}
-		else if ((i % 3 != 0) && (i % 5 == 0))
+		else if (i % 5 == 0)
 		{
 			printf("%s\n", "Buzz");
-		}
-		else if ((i % 3 == 0) && (i % 5 ==0))
-		{
-			printf("%s\n", "FizzBuzz");
 		}
 		else
 		{
