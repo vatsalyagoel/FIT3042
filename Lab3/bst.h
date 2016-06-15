@@ -39,4 +39,8 @@ BST *bst_insert(BST *bst, char *key, void *value);
  */
 KVP *bst_lookup(BST *bst, char *key);
 
+/*
+ * Goes through every BST node and frees the node
+ */
+void bst_free(BST *bst);
 #endif

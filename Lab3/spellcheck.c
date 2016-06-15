@@ -118,6 +118,7 @@ int main(int argc, const char *argv[])
 
     if(infile && dictionary) {
         check_spelling(infile, dictionary);
+        bst_free(dictionary);
     }
     else {
         usage();

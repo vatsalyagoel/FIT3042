@@ -61,3 +61,13 @@ KVP *bst_lookup(BST *bst, char *key)
 		return &(bst -> kvp);
 	}
 }
+
+void bst_free(BST *bst)
+{
+	if (bst != NULL)
+	{
+		bst_free(bst -> left);
+		bst_free(bst -> right);
+		free(bst);
+	}
+}
